@@ -18,7 +18,6 @@ categories: [c#, programming practices, goto]
 <br>
 
 [SO](https://stackoverflow.com/)
-I give this plugin two :+1:!
 
 Why is this even a debate?
 --
