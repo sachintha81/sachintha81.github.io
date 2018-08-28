@@ -34,6 +34,12 @@ A link to [Jekyll Now](http://github.com/barryclark/jekyll-now/).
 <br>
   
 ```
+Open a [LINK](https://www.sach.codes/){:target="_blank"} in a new tab.
+```
+Open a [LINK](https://www.sach.codes/){:target="_blank"} in a new tab.
+<br>
+  
+```
 A big ass literal link <http://github.com/barryclark/jekyll-now/>
 ```
 A big ass literal link <http://github.com/barryclark/jekyll-now/>
