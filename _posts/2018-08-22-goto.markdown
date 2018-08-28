@@ -17,9 +17,6 @@ categories: [c#, programming practices, goto]
 </div>
 <br>
 
-[SO](https://stackoverflow.com/){:target="_blank"}
-
-
 Why is this even a debate?
 --
 First of all, strongly held beliefs are rarely a good thing, if ever. So it's not a bad idea to see why `goto`, despite being frowned upon so hard that your brows become merge into one, still exists in `C#`. Granted, it's ugly and messy, and a maintenance nightmare, but turns out it can still be useful in a handful of cases.
