@@ -17,7 +17,8 @@ categories: [c#, programming practices, goto]
 </div>
 <br>
 
-[SO](https://stackoverflow.com/)
+[SO](https://stackoverflow.com/){:target="_blank"}
+
 
 Why is this even a debate?
 --
