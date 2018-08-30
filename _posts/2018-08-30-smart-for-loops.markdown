@@ -39,7 +39,8 @@ public static void SayHello()
 
 This is perfectly fine and gets the job done. But, and that _but_ is the whole reason for this post, `for` loops often come with those pesky boundary conditions. You can easily make a mistake with the initialization and set it to `1`, or maybe you messed up the condition and set it to `i <= 10`. Something like that. So what if there's a way to eliminate the need to write those conditions and simply specify _how many times_ do you want the loop to iterate? Well, we're in luck.
 
-#### Extension Methods to the Rescue!
+Extension Methods to the Rescue!
+--
 We can write an extension method on `int`, where it will iterate the number of times we want. We pass an `Action()` to the method, so you can execute whatever the method you want.
 
 {% highlight c# %}
@@ -73,7 +74,8 @@ public static void SayHello(int count)
 }
 {% endhighlight %}
 
-#### For-Each is the Way!
+For-Each is the Way!
+--
 Then we can make use of `foreach`.
 
 {% highlight c# %}
