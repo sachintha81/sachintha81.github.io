@@ -91,6 +91,8 @@ foreach (var i in Enumerable.Range(0, 10))
 
 Look at [Documentation](https://docs.microsoft.com/en-us/dotnet/api/system.linq.enumerable.range?view=netframework-4.7.2){:target="_blank"} for the `Range()` method. First parameter is the `Starting Integer` and the second is the `Count`. So the above code sample would start at `0` and run `10` times.
 
+The following would iterate `4` times, from `3` to `6`.
+
 {% highlight c# %}
 foreach (var i in Enumerable.Range(3, 4))
 {
@@ -98,5 +100,4 @@ foreach (var i in Enumerable.Range(3, 4))
 }
 {% endhighlight %}
 
-About would iterate `4` times, from `3` to `6`.
 
