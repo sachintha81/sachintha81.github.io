@@ -19,7 +19,7 @@ categories: [c#, programming practices, for-loop, iteration]
 
 The _Average Joe_ For-Loop
 --
-We have a method and we want to execute it a certain number of times. Say, 10. We can easily write a `for-loop` that iterates `10` times and it's all good.
+We have a method and we want to execute it a certain number of times. Say, 10 times. We can easily write a `for-loop` that iterates `10` times and it's all good.
 
 #### The Normal Way  
 {% highlight c# %}
@@ -63,3 +63,24 @@ static void Main(string[] args)
     10.DoItXTimes(() => SayHello());
 }
 {% endhighlight %}
+
+You can simply call the extension method on an `int` (either literal or a variable), so there's not much mistaking. Now that wasn't bad, but what if we need access to the iterator. Say our `SayHello()` methos looks like this:
+
+{% highlight c# %}
+public static void SayHello(int count)
+{
+    Console.WriteLine("{0} Hello!", count);
+}
+{% endhighlight %}
+
+#### For-Each is the Way!
+Then we can make use of `foreach`.
+
+{% highlight c# %}
+foreach (var i in Enumerable.Range(0, 10))
+{
+    SayHello(i);
+}
+{% endhighlight %}
+
+Look at the [Documentation](https://docs.microsoft.com/en-us/dotnet/api/system.linq.enumerable.range?view=netframework-4.7.2){:target="_blank"} for the `Range()` method. First parameter is the `Starting Integer` and the second is the `Count`.
