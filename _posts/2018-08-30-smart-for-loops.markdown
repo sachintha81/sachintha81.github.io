@@ -19,22 +19,20 @@ categories: [c#, programming practices, for-loop, iteration]
 
 The `Average Joe` For-Loop
 --
+We have a method and we want to execute it a certain number of times. Say, 10. We can easily write a `for-loop` that iterates `10` times and it's all good.
 
-#### Here's the first attempt:  
+#### The Normal Way  
 {% highlight c# %}
-// Do Process using nested if statements
-void DoProcess1()
+static void Main(string[] args)
 {
-    LOG("DoProcess Started...");
- 
-    if (Step1() == true)
-        if (Step2() == true)
-            if (Step3() == true)
-                if (Step4() == true)
-                    if (Step5() == true)
-                        if (Step6() == true)
-                            Step7();
- 
-    LOG("DoProcess Finished");
+    for (int i = 0; i < 10; i++)
+    {
+        SayHello();
+    }
+}
+
+public static void SayHello()
+{
+    Console.WriteLine("Hello!");
 }
 {% endhighlight %}
