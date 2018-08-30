@@ -78,7 +78,7 @@ public static void SayHello(int count)
 
 Then we can't use the above method, but don't worry, all is not lost.
 
-For-Each is the Way!
+Let's turn to For-Each
 --
 Then we can make use of `foreach`.
 
