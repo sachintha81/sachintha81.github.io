@@ -65,7 +65,9 @@ static void Main(string[] args)
 }
 {% endhighlight %}
 
-You can simply call the extension method on an `int` (either literal or a variable), so there's not much mistaking. Now that wasn't bad, but what if we need access to the iterator. Say our `SayHello()` methos looks like this:
+You can simply call the extension method on an `int` (either literal or a variable), so there's not much mistaking. 
+
+Now that wasn't too bad, but what if we need access to the iterator. Say our `SayHello()` method looks like this:
 
 {% highlight c# %}
 public static void SayHello(int count)
@@ -73,6 +75,8 @@ public static void SayHello(int count)
     Console.WriteLine("{0} Hello!", count);
 }
 {% endhighlight %}
+
+Then we can't use the above method, but don't worry, all is not lost.
 
 For-Each is the Way!
 --
