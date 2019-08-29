@@ -28,7 +28,7 @@ var strList = "aABcCdAcb".Select(x => x.ToString());
 var sorted = string.Concat(strList.OrderBy(x => x));
 {% endhighlight %}
 
-This _almost_ gets us there, but not quite. The default sort for strings places lower case before uppoer case, so the resulting string would look like this, which is not quite what we want.
+This _almost_ gets us there, but not quite. The default sort for strings places lower case before upper case, so the resulting string would look like this, which is not quite what we want.
 
     aAAbBccCd
     
