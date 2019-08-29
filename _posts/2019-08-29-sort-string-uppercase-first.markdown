@@ -64,7 +64,8 @@ And we have our expected output, like so:
     `AAaBbCccd`
 
 
-###Another way...
+Another way...
+--
 
 [Rufus L](https://stackoverflow.com/users/2052655/rufus-l){:target="_blank"} has a different approach.
 
