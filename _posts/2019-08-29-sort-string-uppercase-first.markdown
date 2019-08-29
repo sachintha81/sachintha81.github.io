@@ -64,8 +64,8 @@ And we have our expected output, like so:
     `AAaBbCccd`
 
 
-Another way...
---
+###Another way...
+
 [Rufus L](https://stackoverflow.com/users/2052655/rufus-l){:target="_blank"} has a different approach.
 
 The problem is that your code is ordering by the `ASCII` value, which is `65-90` for uppercase `(A-Z)` and `97-122` for lowercase `(a-z)`.
