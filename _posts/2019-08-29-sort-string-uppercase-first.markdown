@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title:  "Sort a string, UpperCase before LowerCase"
