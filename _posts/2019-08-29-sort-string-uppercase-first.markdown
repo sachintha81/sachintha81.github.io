@@ -36,19 +36,19 @@ From here on I'll simply post the excellent answer by [Jonathan Chase](https://s
 
 Since you want to get the capitals first, we'll use the `OrdinalIgnoreCase` comparer, which will group our characters up.
 
-{% highlight c# %}   
+{% highlight c# %}
 .OrderBy(x => x, StringComparer.OrdinalIgnoreCase)
 {% endhighlight %}
 
 Okay, so we've now grouped our characters. We'll now want to sort those groups ordinally to get the capitals to come first, using `ThenBy()`.
 
-{% highlight c# %}   
+{% highlight c# %}
 .ThenBy(x => x, StringComparer.Ordinal)
 {% endhighlight %}
 
 Bringing it together, we get the following:
 
-{% highlight c# %}   
+{% highlight c# %}
 var res = str.Select(x => x.ToString())
              .OrderBy(x => x, StringComparer.OrdinalIgnoreCase)
              .ThenBy(x => x, StringComparer.Ordinal);
@@ -56,7 +56,7 @@ var res = str.Select(x => x.ToString())
 
 Which gives us an `IEnumerable` that is in the order `AAaBbCccd` which is what we're looking for. Now we can do a `string.Concat()` to put this back into a single `string`.
 
-{% highlight c# %}   
+{% highlight c# %}
 var resStr = string.Concat(res);
 {% endhighlight %}
 
@@ -74,7 +74,7 @@ Asuming you always want the uppercase letters to come before their lowercase cou
 
 By doing this, `a` becomes `65.5` `(97 - 31.5)` and will be sorted between `A` `(65)` and `B` `(66)`. Likewise for all the other lower-case letters. This avoids the cost of creating a bunch of new strings for comparison and doing multiple orderings.
 
-{% highlight c# %}   
+{% highlight c# %}
 string str = "zZYyabCABcxX";
 string ordered = string.Concat(str.OrderBy(c => c > 96 && c < 122 ? c - 31.5 : c));
 Console.WriteLine(ordered);
