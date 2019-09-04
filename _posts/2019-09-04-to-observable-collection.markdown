@@ -17,7 +17,7 @@ categories: [c#, linq, wpf, observablecollection]
 </div>
 <br>
 
-`ToList()`, `ToArray()` etc. are great little `LINQ` methods to convert `IEnumerables` into those respective types. Unfortunately `LINQ` doesn't provide such a method to convert one into an `ObservableCollection`, but if you've had any experience with `WPF` you know that you can't escape `ObservableCollection`s. So, here's neat little Extension Method to do just that, so you don't have to do the extra step every time.
+`ToList()`, `ToArray()` etc. are great little `LINQ` methods to convert `IEnumerable`s into those respective types. Unfortunately `LINQ` doesn't provide such a method to convert one into an `ObservableCollection`, but if you've had any experience with `WPF` you know that you can't escape `ObservableCollection`s. So, here's a neat little Extension Method to do just that, so you don't have to do the extra step every time.
 
 {% highlight c# %}
 public static class ExtensionMethods
