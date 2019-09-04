@@ -28,3 +28,9 @@ public static class ExtensionMethods
     }
 }
 {% endhighlight %}
+  
+##Usage##
+{% highlight c# %}
+var list = new List<int>() { 1, 2, 3 };
+var obs = list.ToObservableCollection();
+{% endhighlight %}
