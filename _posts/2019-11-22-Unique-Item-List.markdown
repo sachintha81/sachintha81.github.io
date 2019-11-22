@@ -34,7 +34,7 @@ The following will add `4` to our `list`.
 list.Add(4);	
 {% endhighlight %}
 
-But it will return `false` below, and will not add `2` to the list.
+But it will return `false` below, and will not add `2` to the list again.
 
 {% highlight c# %}
 list.Add(2);	
