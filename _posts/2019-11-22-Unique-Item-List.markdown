@@ -50,7 +50,7 @@ list.Add(new SpaceCowboy() { ID = 1, Name = "Malcolm Reynolds" });
 list.Add(new SpaceCowboy() { ID = 1, Name = "Malcolm Reynolds" });
 {% endhighlight %}
 
-That's because the _uniqueness_ is decided by using the default `IEqualityComparer`. In other words, it will use `IEqualityComparer<T>.GetHashCode()` to decide if an item is unique or not. Therefore, it will add both items above, since as soon as you did `new SpaceCowboy()`, it generated a unique instance in the eyes of the `HashSet` although its property values are the same. <a href="https://stackoverflow.com/a/8952026/302248" target="_blank">This is why</a> it'll return `true` for both above `Add()` calls, but will return `false` for the second `Add()` below.
+That's because the _uniqueness_ is decided by using the default `IEqualityComparer`. In other words, it will use `IEqualityComparer<T>.GetHashCode()` to decide if an item is unique or not. Therefore, it will add both items above, since as soon as you did `new SpaceCowboy()`, it generated a unique instance of `SpaceCowboy` in the eyes of the `HashSet` although its property values are the same. <a href="https://stackoverflow.com/a/8952026/302248" target="_blank">This is why</a> it'll return `true` for both above `Add()` calls, but will return `false` for the second `Add()` below.
 
 {% highlight c# %}
 var list = new HashSet<Customer>();
