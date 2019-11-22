@@ -20,7 +20,7 @@ categories: [c#, list, IEquatable]
 Suppose you want a list of stuff. Well, lucky for you, `.NET` offers just what you want; a list.
 
 {% highlight c# %}
-    var list = new List<int> { 1, 2, 3 };
+var list = new List<int> { 1, 2, 3 };
 {% endhighlight %}
 
 All good, but what if you want a list that will only hold unique items. `HashSet` will get the job done then; it'll only add an item if it's unique. So, if we redfine our 'list' to be this:
