@@ -157,3 +157,16 @@ public void FilterData()
     CollectionViewSource.GetDefaultView(Contacts).Refresh();
 }
 {% endhighlight %}
+
+Results
+--
+
+When application is launched, it will display all items.
+
+<img src="/assets/images/2019-12-19-Filter-Data-Using-CollectionView/All.png" alt="UI Design"/>
+
+Then, let's say we want to filter contacts whose ages are between `30` and `40` inclusive. Simply enter those values to the `From` and `To` text boxes, and click `Filter` button. 
+
+<img src="/assets/images/2019-12-19-Filter-Data-Using-CollectionView/Filtered.png" alt="UI Design"/>
+
+Pretty neat, ha?
