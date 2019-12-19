@@ -27,3 +27,26 @@ So... let's get started.
 
 For the purpose of this, let's say we have a contact list, and we want to filter contacts based on age. My `XAML` is going to be very simple: a `DataGrid` with two columns. At the bottom, two text boxes, `From` and `To` which lets user enter the minimum and maximum ages for the filter. Finally a button, which, when clicked, does the filtering. I bind my `Contacts` list to the `DataGrid`, and rest of the bindings should be obvious. For this example I'm using `MVVM` with `MVVM Light Toolkit`, hence `RelayCommand` and such you'll see later are part of that suite.
 
+{% highlight xaml %}
+<Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition/>
+        <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+    <DataGrid Grid.Row="0" Margin="8" Name="DgData" AutoGenerateColumns="False" CanUserAddRows="False"
+              ItemsSource="{Binding Contacts}">
+        <DataGrid.Columns>
+            <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
+            <DataGridTextColumn Header="Age" Binding="{Binding Age}"/>
+        </DataGrid.Columns>
+    </DataGrid>
+    <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="8, 0, 8, 8" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <TextBlock Height="28" HorizontalAlignment="Left" VerticalAlignment="Center" Text="From:"/>
+        <TextBox x:Name="TBFrom" Width="100" Height="28" Margin="8" Text="{Binding TbFrom}"/>
+        <TextBlock Height="28" HorizontalAlignment="Left" VerticalAlignment="Center" Text="To:"/>
+        <TextBox x:Name="TBTo" Width="100" Height="28" Margin="8" Text="{Binding TbTo}"/>
+        <Button x:Name="Filter" Content="Filter" Width="100" Height="28" Margin="8"
+                Command="{Binding FilterButtonClicked}"/>
+    </StackPanel>
+</Grid>
+{% endhighlight %}
