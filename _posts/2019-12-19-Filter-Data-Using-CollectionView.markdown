@@ -84,7 +84,7 @@ private List<Contact> GetContacts()
         new Contact() { Age = 33, Name = "Chelsea" },
         new Contact() { Age = 30, Name = "Taylor" },
         new Contact() { Age = 35, Name = "Chris" },
-        new Contact() { Age = 23, Name = "Scarlet" },
+        new Contact() { Age = 23, Name = "Scarlett" },
         new Contact() { Age = 42, Name = "Dwayne" },
     };
 }
