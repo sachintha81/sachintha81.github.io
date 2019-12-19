@@ -27,7 +27,7 @@ So... let's get started.
 
 For the purpose of this, let's say we have a contact list, and we want to filter contacts based on age. My `XAML` is going to be very simple: a `DataGrid` with two columns. At the bottom, two text boxes, `From` and `To` which lets user enter the minimum and maximum ages for the filter. Finally a button, which, when clicked, does the filtering. I bind my `Contacts` list to the `DataGrid`, and rest of the bindings should be obvious. For this example I'm using `MVVM` with `MVVM Light Toolkit`, hence `RelayCommand` and such you'll see later are part of that suite.
 
-{% highlight xaml %}
+{% highlight xml %}
 <Grid>
     <Grid.RowDefinitions>
         <RowDefinition/>
@@ -50,3 +50,9 @@ For the purpose of this, let's say we have a contact list, and we want to filter
     </StackPanel>
 </Grid>
 {% endhighlight %}
+
+And it should look like this:
+
+<img src="/assets/images/2019-12-19-Filter-Data-Using-CollectionView/1Empty.png" alt="UI Design"/>
+
+
